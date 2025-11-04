@@ -1,4 +1,5 @@
 import { Input } from "../components/input"
+import { Button } from "../components/Button"
 
 export function SignIn() {
   return (
@@ -11,6 +12,8 @@ export function SignIn() {
       />
 
       <Input required legend="Senha" type="password" placeholder="S1234!" />
+
+      <Button>Entrar</Button>
     </form>
   )
 }
