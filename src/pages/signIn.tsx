@@ -9,7 +9,7 @@ export function SignIn() {
   const [isLoading, setIsLoading] = useState(false)
 
   function onSubmit(event: React.FormEvent) {
-    e.preventDefault()
+    event.preventDefault()
   }
 
   return (
@@ -33,6 +33,13 @@ export function SignIn() {
       <Button type="submit" isLoading={isLoading}>
         Entrar
       </Button>
+
+      <a
+        href="/signUp"
+        className="text-sm font-semibold text-gray-100 mt-10 mb-4 text-center hover:text-green-800 transition ease-linear"
+      >
+        Criar Conta
+      </a>
     </form>
   )
 }
