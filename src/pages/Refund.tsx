@@ -25,7 +25,7 @@ export function Refund() {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-gray-500 w-full rounded-xl flex flex-col p-10 gap-6 lg:min-w-[512px]"
+      className="bg-gray-500 w-full rounded-xl flex flex-col p-10 gap-6 lg:min-w-lg"
     >
       <header>
         <h1 className="text-xl font-bold text-gray-100">
