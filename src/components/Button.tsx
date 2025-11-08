@@ -2,7 +2,7 @@ import { ClassMerge } from "../Utils/ClassMerge"
 
 type Props = React.ComponentProps<"button"> & {
   isLoading?: boolean
-  variant?: "base" | "icon"
+  variant?: "base" | "icon" | "iconSmall"
 }
 
 const variants = {
@@ -28,7 +28,7 @@ export function Button({
       className={ClassMerge([
         "flex items-center justify-center bg-green-100 text-white rounded-lg cursor-pointer hover:bg-green-200 transition ease-linear disabled:opacity-50 disabled:cursor-progress",
         variants.button[variant],
-        className
+        className,
       ])}
       {...rest}
     >

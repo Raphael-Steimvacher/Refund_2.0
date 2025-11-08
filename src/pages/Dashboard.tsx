@@ -7,6 +7,7 @@ import { formatCurrency } from "../Utils/FormatCurrency"
 import { Input } from "../components/input"
 import { Button } from "../components/Button"
 import { RefundItem } from "../components/RefundItem"
+import { Pagination } from "../components/Pagination"
 
 const REFUND_EXAMPLE = {
   id: "123",
@@ -43,17 +44,9 @@ export function Dashboard() {
 
       <div className="mt-6 flex flex-col gap-4 max-h-[342px] overflow-y-scroll">
         <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
-        <RefundItem data={REFUND_EXAMPLE} />
       </div>
+
+      <Pagination current={1} total={10} />
     </div>
   )
 }
