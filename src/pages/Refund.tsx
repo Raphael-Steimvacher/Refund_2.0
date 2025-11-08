@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { useNavigate, useParams } from "react-router"
 
+import { CATEGORIES, CATEGORIES_KEYS } from "../Utils/Categories"
+import fileSvg from "../assets/file.svg"
+
 import { Input } from "../components/input"
 import { Select } from "../components/Select"
-import { CATEGORIES, CATEGORIES_KEYS } from "../Utils/Categories"
 import { Upload } from "../components/Upload"
 import { Button } from "../components/Button"
 
@@ -73,12 +75,23 @@ export function Refund() {
         />
       </div>
 
-      <Upload
-        filename={filename && filename.name}
-        onChange={(event) =>
-          event.target.files && setFilename(event.target.files[0])
-        }
-      />
+      {Params.id ? (
+        <a
+          href="https://github.com/Raphael-Steimvacher"
+          target="_blank"
+          className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear"
+        >
+          <img src={fileSvg} alt="Ícone de arquivo" />
+          Abrir comprovante
+        </a>
+      ) : (
+        <Upload
+          filename={filename && filename.name}
+          onChange={(event) =>
+            event.target.files && setFilename(event.target.files[0])
+          }
+        />
+      )}
 
       <Button type="submit" isLoading={isLoading}>
         {Params.id ? "voltar" : "Enviar"}
