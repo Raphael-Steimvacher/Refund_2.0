@@ -40,7 +40,17 @@ export function Dashboard() {
         </Button>
       </form>
 
-      <div>
+      <div className="mt-6 flex flex-col gap-4 max-h-[342px] overflow-y-scroll">
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
+        <RefundItem data={REFUND_EXAMPLE} />
         <RefundItem data={REFUND_EXAMPLE} />
       </div>
     </div>
