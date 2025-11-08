@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router"
+import { useNavigate, useParams } from "react-router"
 
 import { Input } from "../components/input"
 import { Select } from "../components/Select"
@@ -15,9 +15,14 @@ export function Refund() {
   const [filename, setFilename] = useState<File | null>(null)
 
   const navigate = useNavigate()
+  const Params = useParams<{ id: string }>()
 
   function onSubmit(event: React.FormEvent) {
     event.preventDefault()
+
+    if (Params.id) {
+      return navigate(-1)
+    }
 
     navigate("/confirm", { state: { fromSubmit: true } })
   }
@@ -41,6 +46,7 @@ export function Refund() {
         legend="Nome da solicitação"
         value={name}
         onChange={(event) => setName(event.target.value)}
+        disabled={!!Params.id}
       />
 
       <div className="flex gap-4">
@@ -49,6 +55,7 @@ export function Refund() {
           legend="Categoria"
           value={category}
           onChange={(event) => setCategory(event.target.value)}
+          disabled={!!Params.id}
         >
           {CATEGORIES_KEYS.map((category) => (
             <option key={category} value={category}>
@@ -62,6 +69,7 @@ export function Refund() {
           required
           value={amount}
           onChange={(event) => setAmount(event.target.value)}
+          disabled={!!Params.id}
         />
       </div>
 
@@ -73,7 +81,7 @@ export function Refund() {
       />
 
       <Button type="submit" isLoading={isLoading}>
-        Enviar
+        {Params.id ? "voltar" : "Enviar"}
       </Button>
     </form>
   )
