@@ -8,12 +8,12 @@ Uma nova versão do projeto Refund, agora totalmente reformulada com React, Reac
 
 ## 🧭 Funcionalidades
 
-- Visualização de despesas de forma clara e organizada  
-- Navegação otimizada com **React Router**  
-- Interface totalmente responsiva e estilizada com **TailwindCSS**  
+- Visualização de despesas de forma clara e organizada
+- Navegação otimizada com **React Router**
+- Interface totalmente responsiva e estilizada com **TailwindCSS**
 - Estrutura de componentes reutilizáveis
 - Rotas exclusivas para **usuários comuns** e **administradores**
-- Código limpo e voltado para boas práticas de React  
+- Código limpo e voltado para boas práticas de React
 
 ---
 
@@ -32,6 +32,7 @@ Uma nova versão do projeto Refund, agora totalmente reformulada com React, Reac
 ---
 
 ## 📸 Preview
+
 <p align="center">
   <img width="300px" height="300px"  alt="image" src="https://github.com/user-attachments/assets/c5152e59-b3e8-4d60-9957-bae1472d825d" />
   <img width="300px" height="300px" alt="image" src="https://github.com/user-attachments/assets/9f1ac84f-4cb7-4bc7-86cc-0d681494e460" />
@@ -44,29 +45,33 @@ Uma nova versão do projeto Refund, agora totalmente reformulada com React, Reac
 
 O **Refund 2.0** foi desenvolvido como parte dos meus estudos de front-end moderno, com foco em:
 
-- Criação de componentes reutilizáveis no **React**  
-- Aprendizado de **React Router** para navegação entre páginas  
-- Estilização com **TailwindCSS**  
-- Estruturação e organização de projetos React com **Vite**  
-- Boas práticas de código e escalabilidade  
+- Criação de componentes reutilizáveis no **React**
+- Aprendizado de **React Router** para navegação entre páginas
+- Estilização com **TailwindCSS**
+- Estruturação e organização de projetos React com **Vite**
+- Boas práticas de código e escalabilidade
 
 ---
 
 ## ⚙️ Como Executar
 
-1. **Clone o repositório:**  
+1. **Clone o repositório:**
    ```bash
    git clone https://github.com/Raphael-Steimvacher/Refund_2.0.git
    Acesse a pasta do projeto:
+   ```
 2. **Acesse a pasta do projeto:**
    ```bash
     cd Refund_2.0
+   ```
 3. **Instale as dependências:**
    ```bash
     npm install
+   ```
 4. **Execute o projeto:**
    ```bash
     npm run dev
+   ```
 5. **Acesse no navegador: http://localhost:5173**
 
 ---
