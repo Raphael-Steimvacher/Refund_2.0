@@ -4,7 +4,7 @@ import searchSvg from "../assets/search.svg"
 import { CATEGORIES } from "../Utils/Categories"
 import { formatCurrency } from "../Utils/FormatCurrency"
 
-import { Input } from "../components/input"
+import { Input } from "../components/Input"
 import { Button } from "../components/Button"
 import { RefundItem } from "../components/RefundItem"
 import type { RefundItemProps } from "../components/RefundItem"
