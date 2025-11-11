@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router"
 import { CATEGORIES, CATEGORIES_KEYS } from "../Utils/Categories"
 import fileSvg from "../assets/file.svg"
 
-import { Input } from "../components/input"
+import { Input } from "../components/Input"
 import { Select } from "../components/Select"
 import { Upload } from "../components/Upload"
 import { Button } from "../components/Button"
