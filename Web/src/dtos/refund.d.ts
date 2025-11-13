@@ -1,4 +1,4 @@
-type RefundAPIResponde = {
+type RefundAPIResponse = {
   id: string
   userId: string
   name: string
@@ -11,7 +11,7 @@ type RefundAPIResponde = {
 }
 
 type RefundsPaginationAPIResponse = {
-  refund: RefundAPIResponde[]
+  refund: RefundAPIResponse[]
   pagination: {
     page: number
     perPage: number

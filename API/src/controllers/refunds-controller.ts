@@ -43,7 +43,7 @@ class RefundsController {
     const querySchema = z.object({
       name: z.string().optional().default(""),
       page: z.coerce.number().optional().default(1),
-      perPage: z.coerce.number().optional().default(10),
+      perPage: z.coerce.number().optional().default(5),
     })
 
     const { name, page, perPage } = querySchema.parse(request.query)

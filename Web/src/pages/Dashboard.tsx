@@ -13,7 +13,7 @@ import { RefundItem } from "../components/RefundItem"
 import type { RefundItemProps } from "../components/RefundItem"
 import { Pagination } from "../components/Pagination"
 
-const PER_PAGE = 5
+const PER_PAGE = 2
 
 export function Dashboard() {
   const [name, setName] = useState("")
@@ -24,7 +24,7 @@ export function Dashboard() {
   async function fetchRefunds() {
     try {
       const response = await api.get<RefundsPaginationAPIResponse>(
-        `/refunds?name=${name.trim()}&page=${page}&perPage${PER_PAGE}`
+        `/refunds?name=${name.trim()}&page=${page}&perPage=${PER_PAGE}`
       )
 
       setRefunds(
@@ -70,7 +70,7 @@ export function Dashboard() {
 
   useEffect(() => {
     fetchRefunds()
-  }, [])
+  }, [page])
 
   return (
     <div className="bg-gray-500 rounded-xl p-10 md:min-w-3xl">
