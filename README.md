@@ -13,6 +13,12 @@ Uma nova versão do projeto Refund, agora totalmente reformulada com React, Reac
 - Interface totalmente responsiva e estilizada com **TailwindCSS**
 - Estrutura de componentes reutilizáveis
 - Rotas exclusivas para **usuários comuns** e **administradores**
+- **Integração com API interna para solicitações de reembolso**, permitindo:
+  - Cadastro de pedidos de reembolso  
+  - Envio de justificativas e anexos  
+  - Consulta de status de solicitações  
+  - Histórico completo de requisições  
+  - Comunicação em tempo real com o servidor para manter dados sempre atualizados
 - Código limpo e voltado para boas práticas de React
 
 ---
@@ -46,10 +52,15 @@ Uma nova versão do projeto Refund, agora totalmente reformulada com React, Reac
 O **Refund 2.0** foi desenvolvido como parte dos meus estudos de front-end moderno, com foco em:
 
 - Criação de componentes reutilizáveis no **React**
-- Aprendizado de **React Router** para navegação entre páginas
-- Estilização com **TailwindCSS**
-- Estruturação e organização de projetos React com **Vite**
-- Boas práticas de código e escalabilidade
+- Aprendizado e prática de **React Router**
+- Estilização avançada com **TailwindCSS**
+- Organização de projetos React utilizando **Vite**
+- Melhores práticas de código e escalabilidade
+- **Entendimento de requisições HTTP e integração com APIs**, incluindo:
+  - Fetch / Axios
+  - Métodos GET, POST, PUT e DELETE
+  - Tratamento de erros e respostas do servidor
+  - Comunicação com API interna de reembolso
 
 ---
 
@@ -79,3 +90,14 @@ O **Refund 2.0** foi desenvolvido como parte dos meus estudos de front-end moder
 ## 📜 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## 🚀 Badges
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
