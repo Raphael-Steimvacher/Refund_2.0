@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router"
 import { z, ZodError } from "zod"
 import { AxiosError } from "axios"
@@ -11,6 +11,7 @@ import { Input } from "../components/Input"
 import { Select } from "../components/Select"
 import { Upload } from "../components/Upload"
 import { Button } from "../components/Button"
+import { formatCurrency } from "../Utils/FormatCurrency"
 
 const refundSchema = z.object({
   name: z.string().min(3, {
@@ -28,6 +29,7 @@ export function Refund() {
   const [category, setCategory] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [file, setFile] = useState<File | null>(null)
+  const [fileURL, setFileURL] = useState<string | null>(null)
 
   const navigate = useNavigate()
   const Params = useParams<{ id: string }>()
@@ -80,6 +82,31 @@ export function Refund() {
     }
   }
 
+  async function fetchRefund(id: string) {
+    try {
+      const { data } = await api.get<RefundAPIResponse>(`/refunds/${id}`)
+
+      setName(data.name)
+      setCategory(data.category)
+      setAmount(formatCurrency(data.amount))
+      setFileURL(data.filename)
+    } catch (error) {
+      console.log(error)
+
+      if (error instanceof AxiosError) {
+        return alert(error.response?.data.message)
+      }
+
+      alert("Não foi possível carregar")
+    }
+  }
+
+  useEffect(() => {
+    if (Params.id) {
+      fetchRefund(Params.id)
+    }
+  }, [Params.id])
+
   return (
     <form
       onSubmit={onSubmit}
@@ -126,9 +153,9 @@ export function Refund() {
         />
       </div>
 
-      {Params.id ? (
+      {Params.id && fileURL ? (
         <a
-          href="https://github.com/Raphael-Steimvacher"
+          href={`http://localhost:3333/uploads/${fileURL}`}
           target="_blank"
           className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear"
         >
